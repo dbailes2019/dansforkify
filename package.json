@@ -29,9 +29,7 @@
     "http": "0.0.0",
     "uniqid": "^5.2.0",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "http": "^0.0.0",
-    "fs": "^0.0.1"
+    "webpack-cli": "^3.3.11"
   },
   "engines": {
     "node": "12.14.1"
