@@ -1,3 +1,10 @@
+plugins: [
+  new HtmlWebPackPlugin({
+      filename: 'index.html',
+      template: './src/index.html'
+    })
+],
+
     presets: ['@babel/preset-env']
 
 "webpack-dev-server": "^3.10.3"
@@ -34,7 +41,7 @@
     "uniqid": "^5.2.0"
   }
 
-  
+
 }
 "devDependencies": {
   "@babel/core": "^7.8.4",

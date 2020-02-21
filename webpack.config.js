@@ -3,30 +3,22 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 
-    entry: [ "@babel/polyfill", './src/js/index.js'  ],
+    entry: [ './src/js/index.js'  ],
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'js/bundle.js'
+      path: __dirname,
+      publicPath: '/',
+      filename: 'js/bundle.js'
     },
     devServer: {
-        contentBase: "./dist"
+        contentBase: "/"
     },
-    plugins: [
-      new HtmlWebPackPlugin({
-          filename: 'index.html',
-          template: './src/index.html'
-        })
-    ],
 
     module: {
         rules: [
            {
                 test: /\.m?js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                  }
+                exclude: /node_modules/
             }
         ]
     }
